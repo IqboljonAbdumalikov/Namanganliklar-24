@@ -85,6 +85,7 @@ body {
     --medium-text-color: #515151;
 }
 .site-header {
+    border-top: 4px solid #295093;
     background-color: #f6f6f9;
 }
 .site-header-main {
@@ -94,17 +95,15 @@ body {
     padding-top: 44px;
     margin-bottom: 40px;
 }
+
 .header-link {
     display: flex;
     align-items: center;
 }
-.header-link:after {
-    content: "";
-    width: 258px;
-    height: 21px;
-    background-image: url("../images/currencies.svg");
-    background-repeat: no-repeat;
-    background-size: contain;
+.site-header-main-home {
+    display: flex;
+    align-items: center;
+
 }
 .header-logo {
     padding-top: 3px;
@@ -113,8 +112,24 @@ body {
     padding-left: 8px;
     background-color: #fff;
     border-radius: 5px;
-    margin-right: 17px;
     box-shadow: 0px 2px 6px rgba(202, 202, 202, 0.25);
+}
+.header-currency-list {
+    display: flex;
+    list-style-type: none;
+    align-items: center;
+}
+.currency-item {
+    padding-right: 20px;
+}
+.current-cost {
+    font-family: 'Rubik', sans-serif;
+    font-weight: 400;
+    line-height: 19px;
+    color: #7a7a7a;
+}
+.currency-unity {
+    color: #285193;
 }
 .header-buttons-list {
     display: flex;
@@ -156,13 +171,17 @@ body {
     background-color: #fff;
     margin-left: 22px;
 }
+
 .btn-sign-up:before {
     background-image: url("../images/telegram-logo.svg");
 }
 .btn-sign-up {
     color: #fff;
-    background-color: #1e96c8;
+    background-image: linear-gradient(90deg, #1E96C8 15.07%, #37AEE2 85.96%);
     margin-left: 23px;
+}
+.btn-sign-up:hover {
+    background-image: linear-gradient(90deg, #16C8 15.07%, #37A 85.96%);
 }
 .sitenav-list {
     display: flex;
@@ -181,9 +200,10 @@ body {
     line-height: 22px;
     font-size: 19px;
     color: var(--medium-text-color);
+    transition: color 0.1s linear;
 }
 .sitenav-link:hover {
-    text-decoration: underline;
+    color: #295091;
 }
 .site-header-advertising-banner {
     margin-bottom: 23px;
