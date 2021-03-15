@@ -1,6 +1,18 @@
 
+/* =============== CONTENTS =============== */
+/* FONTS */
+/* BOX-SIZING */
+/* GLOBAL STYLES */
+/* HELPER / GLOBAL COMPONENTS */
+/* MEDIA QUERIES */
+
+
+/*------------------------------------*\
+  #FONT-FACE
+\*------------------------------------*/
+
 @font-face {
-    font-family: '../fonts/Rubik';
+    font-family: 'Rubik';
     src: url('../fonts/Rubik-Medium.woff2') format('woff2'),
         url('../fonts/Rubik-Medium.woff') format('woff');
     font-weight: 500;
@@ -9,10 +21,170 @@
 }
 
 @font-face {
-    font-family: '../fonts/Rubik';
+    font-family: 'Rubik';
     src: url('../fonts/Rubik-Regular.woff2') format('woff2'),
         url('../fonts/Rubik-Regular.woff') format('woff');
     font-weight: 400;
     font-style: normal;
     font-display: swap;
+}
+
+/*------------------------------------*\
+  #BOX-SIZING
+\*------------------------------------*/
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+/*------------------------------------*\
+  #GLOBAL-STYLES
+\*------------------------------------*/
+
+body {
+  padding: 0;
+  margin: 0;
+  font-weight: 500;
+  line-height: 1.5;
+  color: #222;
+}
+
+/* VISUALLY HIDING CODE */
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+/* CONTAINER */
+
+.container {
+  width: 1240px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ROOT*/
+
+:root {
+    --text-color: #7688a4;
+    --medium-text-color: #515151;
+}
+.site-header {
+    background-color: #f6f6f9;
+}
+.site-header-main {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 44px;
+    margin-bottom: 40px;
+}
+.header-link {
+    display: flex;
+    align-items: center;
+}
+.header-link:after {
+    content: "";
+    width: 258px;
+    height: 21px;
+    background-image: url("../images/currencies.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.header-logo {
+    padding-top: 3px;
+    padding-right: 6px;
+    padding-bottom: 4px;
+    padding-left: 8px;
+    background-color: #fff;
+    border-radius: 5px;
+    margin-right: 17px;
+    box-shadow: 0px 2px 6px rgba(202, 202, 202, 0.25);
+}
+.header-buttons-list {
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+.btn {
+    font-family: 'Rubik', sans-serif;
+    border: none;
+    display: flex;
+    padding-top: 11px;
+    padding-bottom: 8px;
+    border-radius: 5px;
+}
+.btn-magnifier {
+    width: 38px;
+    height: 40px;
+    background-color: #fff;
+    border: none;
+    padding-top: 8px;
+    padding-right: 6px;
+    padding-bottom: 8px;
+    padding-bottom: 8px;
+    border-radius: 5px;
+}
+.btn:before {
+    content: "";
+    width: 20px;
+    height: 20px;
+    margin-right: 6px;
+    border-radius: 50%;
+}
+.btn-language:before {
+    background-image: url("../images/russian-language-logo.svg");
+}
+.btn-language {
+    background-color: #fff;
+    margin-left: 22px;
+}
+.btn-sign-up:before {
+    background-image: url("../images/telegram-logo.svg");
+}
+.btn-sign-up {
+    color: #fff;
+    background-color: #1e96c8;
+    margin-left: 23px;
+}
+.sitenav-list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    list-style-type: none;
+    margin: 0;
+    padding: 22px 25px;
+    margin-bottom: 18px;
+    background-color: #fff;
+    border-radius: 5px;
+}
+.sitenav-link {
+    font-family: "Rubik", "Times New Roman", sans-serif;
+    text-decoration: none;
+    line-height: 22px;
+    font-size: 19px;
+    color: var(--medium-text-color);
+}
+.sitenav-link:hover {
+    text-decoration: underline;
+}
+.site-header-advertising-banner {
+    margin-bottom: 23px;
 }
