@@ -44,6 +44,7 @@ h1, h2, h3 {
 *::before,
 *::after {
     box-sizing: inherit;
+    margin: 0;
 }
 
 /*------------------------------------*\
@@ -286,4 +287,39 @@ time {
 }
 .notifications-btn:hover {
     background-image: linear-gradient(90deg, rgba(255, 139, 54, 0.9) 0%, #FE5C28 88.43%);
+}
+.last-news-list {
+    width: 794px;   
+}
+.last-news-figure {
+    display: flex;
+    margin-bottom: 18px;
+}
+.last-news-image {
+    margin-right: 19px;
+}
+.last-news-heading {
+    margin: 0;
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 20px;
+}
+.last-news-desc {
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 18px;
+}
+.last-news-date {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    line-height: 17px;
+    color: #7688a4;
+}
+.last-news-date:before {
+    content: "";
+    background-image: url("../images/outline-date-range.svg");
+    background-repeat: no-repeat;
+    width: 18px;
+    height: 20px;
 }
